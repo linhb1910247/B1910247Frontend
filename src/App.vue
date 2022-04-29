@@ -1,16 +1,32 @@
-<script>
-export default {
+<template>
+    
+   <div id="app">
+       
+        <AppHeader />
 
-}
+        <div class="container mt-3">
+            <router-view />
+        </div>
+        <AppFooter />
+   
+        
+    </div>
+</template>
+<script>
+import AppHeader from "@/components/AppHeader.vue";
+import AppFooter from "@/components/AppFooter.vue";
+export default {
+    name: 'app',
+  
+
+    components: {
+       
+        AppHeader,
+
+        AppFooter,
+        
+    },
+};
 </script>
 
-<template>
-    <h1>Hello, Vue.js!</h1>
-</template>
 
-<style>
-.page {
-    max-width: 400px;
-    margin: auto;
-}
-</style>
